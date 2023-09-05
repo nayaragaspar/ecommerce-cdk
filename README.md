@@ -1,14 +1,38 @@
-# Welcome to your CDK TypeScript project!
+## ECommerce com CDK (AWS) 
 
-This is a blank project for TypeScript development with CDK.
+Este projeto visa criar uma infraestrutura na AWS utilizando o framework CDK, com a linguagem de programação Typescript e Lambdas em Javascript.
+Serviços utilizados: 
+- ApiGateway
+- Wobsocket
+- Lambda
+- DynamoDB
+- Cloudwatch Alarmes (e logs)
+- SQS
+- SNS
+- IAM
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## Configuração 
 
-## Useful commands
+- Instale o AWS CLI e configure com as credenciais da sua conta com o seguinte comando:
+  ```
+  aws configure
+  ```
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+- Instale as dependências do projeto:
+  ```
+  npm install
+  ```
+
+- Execute os comandos para deploy no ambiente:
+  ```
+  cdk bootstrap
+  ```
+  ```
+  cdk deploy --all 
+  ```
+
+  Caso não queira concordar com as permissões no cmd:
+  ```
+  cdk deploy --all --require-approval never
+  ```
+  
